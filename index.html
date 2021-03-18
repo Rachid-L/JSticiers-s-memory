@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script.js" defer></script>
@@ -11,16 +12,39 @@
 
 <body id="page">
 
-    <nav>
-        <ul>
-            <div><button class="dropdown-btn">Menu</button></div>
-            <div class="dropdown-menu-content">
-                <li>Règles du jeu</li>
-                <li>Choix du niveau</li>
-                <li>Choix du langage</li>   
-            </div>
-        </ul>
-    </nav>
+    <aside>
+	
+        <div class="sidenav">
+              
+               <img id="fourm" src="logo.png" alt="Italian Trulli" style="width:180px;height:180px;">
+          
+          <div class="btn">
+          <button class="regle">Régle du jeux</button>
+          </div>
+      
+      
+          <label for="mode" class="mode1" id="text1">choisis ton code</label>
+           <select class="mode1" id="mode" name="mode">
+           <option value="">HTML</option>
+           <option value="">CSS</option>
+           <option value="">JS</option>
+          </select>
+              
+           <label for="dificult" class="mode" id="text">choisis ton mode</label>
+           <select class="mode" id="dificult" name="dificult">
+           <option value="">facile</option>
+           <option value="">normal</option>
+           <option value="">difficile</option>
+          </select>
+      
+          <div class="btn">
+          <button class="plays">PLAYS</button>
+          </div>
+      
+      </div>
+      </aside>
+
+
 
     <header>MEMORY GAME</header>
 
