@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="navbar.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script.js" defer></script>
     <title>Memory Game by La Ligue des JSticiers</title>
@@ -15,34 +16,36 @@
     <aside>
 	
         <div class="sidenav">
+
+            <img id="fourm" src="logo.png" alt="Italian Trulli" style="width:180px;height:180px;">
+        
+            <section class="menu">
+                <div class="btn">
+                    <button class="regle">Régle du jeux</button>
+                </div>
+      
+      
+                <label for="mode" class="mode1" id="text1">choisis ton code</label>
+                <select class="mode1" id="mode" name="mode">
+                    <option value="">HTML</option>
+                    <option value="">CSS</option>
+                    <option value="">JS</option>
+                </select>
               
-               <img id="fourm" src="logo.png" alt="Italian Trulli" style="width:180px;height:180px;">
-          
-          <div class="btn">
-          <button class="regle">Régle du jeux</button>
-          </div>
+                <label for="dificult" class="mode" id="text">choisis ton mode</label>
+                <select class="mode" id="dificult" name="dificult">
+                    <option value="">facile</option>
+                    <option value="">normal</option>
+                    <option value="">difficile</option>
+                </select>
       
-      
-          <label for="mode" class="mode1" id="text1">choisis ton code</label>
-           <select class="mode1" id="mode" name="mode">
-           <option value="">HTML</option>
-           <option value="">CSS</option>
-           <option value="">JS</option>
-          </select>
-              
-           <label for="dificult" class="mode" id="text">choisis ton mode</label>
-           <select class="mode" id="dificult" name="dificult">
-           <option value="">facile</option>
-           <option value="">normal</option>
-           <option value="">difficile</option>
-          </select>
-      
-          <div class="btn">
-          <button class="plays">PLAYS</button>
-          </div>
-      
-      </div>
-      </aside>
+                <div class="btn">
+                    <button class="plays">PLAYS</button>
+                </div>
+            </section>
+        
+        </div>
+    </aside>
 
 
 
