@@ -11,11 +11,15 @@
   
   
   #fourm {
+    width:190px;
+    height:190px;
       margin: 20px 0px 00px 20px;	
     border-radius: 100px;
     box-shadow: 0 0px 100px rgba(247, 123, 237, .6);
     cursor: pointer;
-  
+    border-style: solid;
+    border-width: 5px;
+    border-color: #242424;
   }
   
   aside {
@@ -31,10 +35,7 @@
     padding-top: auto;
     padding: 16px 80px 10px 16px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
-    
     border-right: 6px solid #242424;
-   
-    
     
   }
   
@@ -51,20 +52,18 @@
       background: white;
       font-size: 20px;
       font-family: Arial, Helvetica, sans-serif;
+      border-style: solid;
+      border-width: 5px;
+      border-color: #242424;
   
   }
-  
- 
-  
+
+  .show-btn:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+
   }
-  
-  button:hover {
-    background-color: #AB4ED1;
-        color: white;
-    border-top: 1px solid #8B32B0;
-    
-  }
-  
+
   #text1 {
     color: pink;
     position: fixed;
@@ -84,9 +83,9 @@
       text-align: center;
       border-style: none;
       border-radius: 10px;
-    
+      font-family: Arial, Helvetica, sans-serif;
+   
   }
-  
   
   #text {
     color: pink;
@@ -101,23 +100,85 @@
   
   .mode {
   
-      
-      margin-top: 100px;
-      margin-left: 63px;
-      padding: 20px;
-      text-align: center;
-      border-style: none;
-      border-radius: 10px;
-  }  
-
-      button.plays {
+    margin-top: 100px;
+    margin-left: 63px;
+    padding: 20px;
+    text-align: center;
+    border-style: none;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
   
-      padding: 30px;
-      margin-left: 50px;
-      margin-top: 100px;
-      text-align: center;
-      border-style: none;
-      border-radius: 50px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, .8);
-      cursor: default;
-      font-size: 20px; }
+}
+
+button.plays {
+  
+  padding: 30px;
+  margin-left: 50px;
+  margin-top: 100px;
+  text-align: center;
+  border-style: none;
+  border-radius: 50px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .8);
+  cursor: pointer;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-style: solid;
+      border-width: 5px;
+      border-color: #242424;
+}
+ button:hover {
+
+  background-color: #4CAF50; /* Green */
+  color: white;
+
+ }
+
+
+
+
+
+@media screen and (max-width: 900px){
+aside{
+    width: 40px;
+    height: 100%;
+    background-color: #1b1b1b; /* Black */
+    box-shadow: 10px 50px 10px rgba(0, 0, 0, 0.6);
+}
+.show-btn {
+font-size: 16px;
+margin-left: -15px;
+height: 20px;
+width: 69px;
+}
+.mode1{
+    margin-left: 0px;
+}
+#text1 {
+  font-size: 17px;
+margin-left: -30px;
+
+}
+
+#text {
+  font-size: 17px;
+margin-left: -30px;
+
+}
+
+
+.mode {
+    margin-left: 0px;
+}
+button.plays {
+    margin-left: -10px;
+}
+#fourm{
+    width:120px;
+    height:120px;
+    margin-left: -10px;
+    
+}
+
+
+
+}
