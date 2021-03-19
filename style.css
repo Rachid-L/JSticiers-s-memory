@@ -5,21 +5,12 @@
   width: 100%;
   height: 100vh;
   grid-template-areas:
-<<<<<<< HEAD
     'nav head'
     'nav  main'
     'nav  play'
     'nav  foot';
-  grid-template-rows: 100px 1fr 100px 60px;
-  grid-template-columns: 200px 1fr;
-=======
-    "nav head"
-    "nav  main"
-    "nav  play"
-    "nav  foot";
   grid-template-rows: 50px 1fr 100px 60px;
   grid-template-columns: 130px 1fr;
->>>>>>> 787a6cc1f0a5b0f4d216c903f4d935ecf15b3b03
   margin: 0;
 }
 
@@ -76,7 +67,7 @@
 .card {
   height: 80px;
   width: 80px;
-  
+
   margin: 10px;
 }
 
@@ -89,7 +80,41 @@ h1 {
   background-color: transparent;
   display: none;
 }
-<<<<<<< HEAD
+
+.boxcards {
+  margin-top: -80px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 150px);
+  grid-gap: 3px 3em;
+}
+
+img {
+  width: 90px;
+  height: 120px;
+}
+
+@media screen and (max-width: 900px) {
+  .boxcards {
+    height: 50%;
+    margin-top: 20px;
+    margin-bottom: 227px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 140px);
+    grid-gap: 3px 1em;
+  }
+
+  main {
+    margin-left: 0px;
+  }
+
+  .card {
+    margin-bottom: -100%;
+    margin-top: -100px;
+  }
+}
+
 /*Permet le flip over*/
 
 .flip-over {
@@ -123,47 +148,3 @@ h1 {
     transform: perspective(400px);
   }
 }
-=======
-
-
-  .boxcards{
-   margin-top: -80px;
-    display: grid;
-    
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 150px );
-    grid-gap: 3px 3em;
-  
-  
-
-   }
-   img{
-     width: 90px;
-     height: 120px;
-   }
-
-  
-@media screen and (max-width: 900px){
-
-.boxcards{
- height: 50%;
- margin-top:20px;
- margin-bottom: 227px;
- display: grid;
-    
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 140px );
-    grid-gap: 3px 1em;
-}
-
-
-main{
-margin-left: 0px;
-}
-.card{
-margin-bottom: -100%;
-margin-top: -100px; 
-}
-
-}
->>>>>>> 787a6cc1f0a5b0f4d216c903f4d935ecf15b3b03
