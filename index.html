@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="modale.css" />
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script.js" defer></script>
@@ -12,17 +13,42 @@
 
 <body id="page">
 
+
+
+<!--fenêtres pop-up-->
+
+    <div class="center">
+        <input type="checkbox" id="show">
+        
+        
+           <div class="container1">
+           <label for="show" class="close-btn fas fa-times">&#10008;</label>
+           <div class="text">
+               <h1>Le Memory est un jeu très facile ! </h1>
+               <p>Memory en ligne, jeu de mémoire ou encore appelé jeu des paires <br> 
+                exerces ta mémoire en retrouvant les couples d'images identiques.<br>
+                 Pour cela, tu dois cliquer sur deux cartes succéssivement.<br>
+                 Si tu reformes correctement les couples, les images restent apparentes.<br>
+                  Si tu te trompes, les cartes redeviennent faces cachées.
+                 Le jeu se termine lorsque toutes les cartes sont retournées.</p>
+
+
+           </div>
+
+       </div>
+
+    </div>
+
+
+ <!--bar nav coté gauche-->
     <aside>
-	
         <div class="sidenav">
-              
-               <img id="fourm" src="logo.png" alt="Italian Trulli" style="width:180px;height:180px;">
-          
+                 <img id="fourm" src="logo.png" alt="Italian Trulli" style="width:180px;height:180px;">
           <div class="btn">
-          <button class="regle">Régle du jeux</button>
-          </div>
-      
-      
+
+            <label for="show" class="show-btn">les règle</label>
+         
+        </div>
           <label for="mode" class="mode1" id="text1">choisis ton code</label>
            <select class="mode1" id="mode" name="mode">
            <option value="">HTML</option>
@@ -40,10 +66,9 @@
           <div class="btn">
           <button class="plays">PLAYS</button>
           </div>
-      
       </div>
-      </aside>
-
+   </aside> 
+   
 
 
     <header>MEMORY GAME</header>
