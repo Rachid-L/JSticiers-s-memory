@@ -15,7 +15,7 @@
     'nav  main'
     'nav  play'
     'nav  foot';
-  grid-template-rows: 150px 1fr 100px 50px;
+  grid-template-rows: 150px 1fr 100px 70px;
   grid-template-columns: 130px 1fr;
   margin: 0;
 }
@@ -163,18 +163,9 @@ button:hover {
 
 /*Disposition des cartes*/
 
-.container {
-  height: 60%;
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-
 .card {
-  height: 80px;
-  width: 80px;
+  height: 100px;
+  width: 100px;
   margin: 10px;
   background-color: var(--main-blue);
 }
@@ -193,6 +184,7 @@ button:hover {
 body{
   color: var(--second-blue);
   font-family: 'Roboto', sans-serif;
+  text-align: center;
 }
 
 header,
@@ -207,6 +199,12 @@ h1 {
 #replay{
   width: 40px;
   padding: 20px;
+  cursor: pointer;
+}
+
+#replay:active{
+  transform: rotateZ(-360deg);
+  transition: all 0.1s ease;
 }
 
 /*MODALE.CSS*/
@@ -349,6 +347,8 @@ input[type="checkbox"] {
   background-color: transparent;
   display: none;
 }
+
+#replay:
 
 @keyframes flipOver {
   from {
