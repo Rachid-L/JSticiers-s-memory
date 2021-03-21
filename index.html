@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="modale.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="navbar.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script.js" defer></script>
     <title>Memory Game by La Ligue des JSticiers</title>
@@ -14,71 +14,57 @@
 
 <body id="page">
 
-    
+<!--bar nav coté gauche-->
 
+    <nav id="barreMenu">
+        <div class="sidenav">
+            <img id="fourm" src="img/logo.png" alt="Draw of an Anteater">
+            <div class="btn">
+                <label for="show" class="show-btn">Règles du jeu</label>
+            </div>
+            <div class="btn">
+            <label for="mode" class="mode1" id="text1">Choisis ton code</label>
+            </div>
+            <select class="mode1" id="mode" name="mode">
+                <option value="">HTML</option>
+                <option value="">CSS</option>
+                <option value="">JS</option>
+            </select>
+            <div class="btn">
+            <label for="dificult" class="mode" id="text">Choisis ton mode</label>
+            </div>
+            <select class="mode" id="dificult" name="dificult">
+                <option value="">Facile</option>
+                <option value="">Normal</option>
+                <option value="">Difficile</option>
+            </select>
+            <div class="btn">
+                <button id="play" class="plays">PLAY</button>
+            </div>
+        </div>
+    </nav>
 
-<!--fenêtres pop-up-->
+    <!--Fenêtre pop-up-->
 
     <div class="center">
         <input type="checkbox" id="show">
-        
-        
-           <div class="container1">
-           <label for="show" class="close-btn fas fa-times">&#10008;</label>
-           <div class="text">
-               <h1>Le Memory est un jeu très facile ! </h1>
-               <p>Memory en ligne, jeu de mémoire ou encore appelé jeu des paires <br> 
-                exerces ta mémoire en retrouvant les couples d'images identiques.<br>
-                 Pour cela, tu dois cliquer sur deux cartes succéssivement.<br>
-                 Si tu reformes correctement les couples, les images restent apparentes.<br>
-                  Si tu te trompes, les cartes redeviennent faces cachées.
-                 Le jeu se termine lorsque toutes les cartes sont retournées.</p>
-
-
-           </div>
-
-       </div>
-
+        <div class="popup">
+            <label for="show" class="close-btn fas fa-times">&#10008;</label>
+            <div class="text">
+                <h1>Le Memory est un jeu très facile ! </h1>
+                <p>Memory en ligne, jeu de mémoire ou encore appelé jeu des paires <br> 
+                exerce ta mémoire en retrouvant les couples d'images identiques.<br>
+                Pour cela, tu dois cliquer sur deux cartes successivement.<br>
+                Si tu formes correctement les couples, les images restent apparentes.<br>
+                Si tu te trompes, les cartes redeviennent faces cachées.
+                Le jeu se termine lorsque toutes les cartes sont retournées.</p>
+            </div>
+        </div>
     </div>
 
-
- <!--bar nav coté gauche-->
- <aside id="barreMenu">
-
-        <div class="sidenav">
-                 <img id="fourm" src="logo.png" alt="Italian Trulli" >
-          <div class="btn">
-
-            <label for="show" class="show-btn">les règles</label>
-         
-        </div>
-          <label for="mode" class="mode1" id="text1">choisis ton code</label>
-           <select class="mode1" id="mode" name="mode">
-           <option value="">HTML</option>
-           <option value="">CSS</option>
-           <option value="">JS</option>
-          </select>
-              
-                <label for="dificult" class="mode" id="text">choisis ton mode</label>
-                <select class="mode" id="dificult" name="dificult">
-                    <option value="">facile</option>
-                    <option value="">normal</option>
-                    <option value="">difficile</option>
-                </select>
-          <div class="btn">
-     <button id="play" class="plays">PLAY</button>
- </div>
-
-</div>
-   </aside> 
-   
-
-               
-
-
-
-
-    <header>MEMORY GAME</header>
+    <header>
+        <img id="logoMemory" src="img/logo-memory.png">
+    </header>
 
     <main>
         
@@ -86,26 +72,26 @@
 
             <div class="boxcards">
 
-            <div class="card"><img src="https://fakeimg.pl/100x100"/></div>
-            <div class="card"><img src="https://fakeimg.pl/100x100"/></div>
-            <div class="card"><img src="https://fakeimg.pl/100x100"/></div>
-            <div class="card"><img src="https://fakeimg.pl/100x100"/></div>
-            <div class="card"><img src="https://fakeimg.pl/100x100"/></div>
-            <div class="card"><img src="https://fakeimg.pl/100x100"/></div>
-            <div class="card"><img src="https://fakeimg.pl/100x100"/></div>
-            <div class="card"><img src="https://fakeimg.pl/100x100"/></div>
-            <div class="card"><img src="https://fakeimg.pl/100x100"/></div>
-            <div class="card"><img src="https://fakeimg.pl/100x100"/></div>
-            <div class="card"><img src="https://fakeimg.pl/100x100"/></div>
-            <div class="card"><img src="https://fakeimg.pl/100x100"/></div>
-            <div class="card"><img src="https://fakeimg.pl/100x100"/></div>
-            <div class="card"><img src="https://fakeimg.pl/100x100"/></div>
-            <div class="card"><img src="https://fakeimg.pl/100x100"/></div>
-            <div class="card"><img src="https://fakeimg.pl/100x100"/></div>
-            <div class="card"><img src="https://fakeimg.pl/100x100"/></div>
-            <div class="card"><img src="https://fakeimg.pl/100x100"/></div>
-            <div class="card"><img src="https://fakeimg.pl/100x100"/></div>
-            <div class="card"><img src="https://fakeimg.pl/100x100"/></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
 
             </div>
 
@@ -115,9 +101,14 @@
 
     <section id="play">
         <h1>Play</h1>
+        <img id="replay" src="img/replay.png" alt="Replay arrow">
     </section>
     
-    <footer>Created by La Ligue des JSticiers</footer>
+    <footer>
+        <p>Created by La Ligue des JSticiers
+        <br>
+        <span style="font-size: small;">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></span></p>
+    </footer>
 
 </body>
 </html>

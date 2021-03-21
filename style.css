@@ -1,4 +1,10 @@
-/*Template CSS de la page en display grid*/
+/*Template CSS de la page en display grid + couleurs*/
+
+:root {
+  --main-blue:#02b3e4 ;
+  --main-white: #f9f9f9;
+  --second-blue: #34568B;
+}
 
 #page {
   display: grid;
@@ -9,34 +15,31 @@
     'nav  main'
     'nav  play'
     'nav  foot';
-  grid-template-rows: 50px 1fr 100px 60px;
+  grid-template-rows: 150px 1fr 100px 50px;
   grid-template-columns: 130px 1fr;
   margin: 0;
 }
 
 #page > header {
   grid-area: head;
-  background-color: rgb(56, 53, 53);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
-  
-  
-  color: pink; 
-  
+  color: var(--second-blue);
+  background-color: var(--main-white);
 }
 
 #page > nav {
   grid-area: nav;
-  background-color: grey;
+  background-color: var(--main-blue);
   display: flex;
-  box-shadow: 2px 2px 2px black;
+  box-shadow: 10px 10px 10px pink;
 }
 
 #page > main {
   grid-area: main;
-  background-color: rgba(63, 20, 9, 0.829);
+  background-color: var(--main-white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,7 +47,7 @@
 
 #page > #play {
   grid-area: play;
-  background-color: rgb(112, 16, 16);
+  background-color: var(--main-white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,13 +55,113 @@
 
 #page > footer {
   grid-area: foot;
-  background-color: rgb(56, 53, 53);
+  background-color:var(--main-blue);
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--main-white);
 }
 
-/*Flex dans les élèments*/
+
+/*NAVBAR.CSS*/
+
+#fourm {
+  width:190px;
+  height:190px;
+  margin: 20px 0px;	
+  border-radius: 100px;
+  box-shadow: 0 0px 100px pink;
+  cursor: pointer;
+}
+
+nav {
+  height: 100%;
+  width: 200px; 
+  position: fixed; /*Barre latérale fixe (reste en place lors du défilement) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  padding: 16px 80px 10px 16px;
+}
+  
+.show-btn {
+  position: fixed;
+  padding: 30px;
+  margin-left: 45px;
+  margin-top: 50px;
+  border-style: none;
+  border-radius: 50px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .8);
+  cursor: pointer;
+  background: var(--main-white);
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.show-btn:hover {
+  background-color:pink; /* Green */
+  color: var(--main-white);
+}
+
+button.plays {
+  padding: 30px;
+  margin-left: 50px;
+  margin-top: 100px;
+  text-align: center;
+  border-style: none;
+  border-radius: 50px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .8);
+  cursor: pointer;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+  background-color:pink; /* Green */
+  color: var(--main-white);
+}
+
+#text1 {
+  color: pink;
+  position: fixed;
+  margin-top: 180px;
+  margin-left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.mode1{
+  margin-top: 250px;
+  margin-bottom: 30px;
+  margin-left: 63px;
+  padding: 20px;
+  text-align: center;
+  border-style: none;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#text {
+  color: pink;
+  position: fixed;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.mode {
+  margin-top: 100px;
+  margin-left: 63px;
+  padding: 20px;
+  text-align: center;
+  border-style: none;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Disposition des cartes*/
 
 .container {
   height: 60%;
@@ -72,18 +175,8 @@
 .card {
   height: 80px;
   width: 80px;
-
   margin: 10px;
-}
-
-header,
-h1 {
-  font-size: xx-large;
-}
-
-.hidden {
-  background-color: transparent;
-  display: none;
+  background-color: var(--main-blue);
 }
 
 .boxcards {
@@ -94,10 +187,88 @@ h1 {
   grid-gap: 3px 3em;
 }
 
-img {
-  width: 90px;
-  height: 120px;
+
+/*CSS élements*/
+
+body{
+  color: var(--second-blue);
+  font-family: 'Roboto', sans-serif;
 }
+
+header,
+h1 {
+  font-size: xx-large;
+}
+
+#logoMemory{
+  width: 400px;
+}
+
+#replay{
+  width: 40px;
+  padding: 20px;
+}
+
+/*MODALE.CSS*/
+
+.popup{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--main-white);
+  opacity: 0.95;
+  width: 1000px;
+  padding: 30px;
+  box-shadow: 0 0 50px pink;
+  border-radius: 40px;
+  border-style: dotted;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+#show:checked ~ .popup {
+  display: block;
+}
+
+.popup .close-btn {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  color: grey;
+}
+
+.popup .close-btn:hover {
+  color: pink;
+}
+
+.popup .text {
+  padding-bottom: 20px;
+  font-size: 35px;
+  text-align: center;
+  color: gray;
+}
+
+.popup .text h1 {
+  padding-bottom: 20px;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.popup .text p {
+  padding-bottom: 220px;
+  font-size: 20px;
+  font-weight: 550;
+  text-align: center;
+}
+
+/*RESPONSIVE*/
 
 @media screen and (max-width: 900px) {
   .boxcards {
@@ -120,12 +291,63 @@ img {
   }
 }
 
-/*Permet le flip over*/
+/*RESPONSIVE NAVBAR*/
+
+@media screen and (max-width: 900px){
+  nav{
+    width: 40px;
+    height: 100%;
+    background-color: var(--second-blue); /* Black */
+    box-shadow: 10px 50px 10px rgba(0, 0, 0, 0.6);
+  }
+
+  .show-btn {
+    font-size: 16px;
+    margin-left: -15px;
+    height: 20px;
+    width: 69px;
+  }
+  
+  .mode1{
+    margin-left: 0px;
+  }
+
+  #text1 {
+    font-size: 17px;
+    margin-left: -30px;
+  }
+
+  #text {
+    font-size: 17px;
+    margin-left: -30px;
+  }
+
+  .mode {
+    margin-left: 0px;
+  }
+
+  button.plays {
+    margin-left: -10px;
+  }
+
+  #fourm{
+    width:120px;
+    height:120px;
+    margin-left: -10px;
+  }
+}
+
+/*Animations*/
 
 .flip-over {
-  background: #02b3e4;
+  background: var(--main-blue);
   animation-name: flipOver;
   animation-duration: 0.5s;
+}
+
+.hidden {
+  background-color: transparent;
+  display: none;
 }
 
 @keyframes flipOver {
@@ -152,4 +374,4 @@ img {
   to {
     transform: perspective(400px);
   }
-}
+};
