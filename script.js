@@ -173,3 +173,5 @@ replay.addEventListener("onClick", ()=>{
   tabGame = tabResult;
 })
 
+
+
