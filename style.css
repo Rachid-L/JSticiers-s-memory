@@ -62,6 +62,9 @@
   color: var(--main-white);
 }
 
+img{
+  cursor:pointer;
+}
 
 /*NAVBAR.CSS*/
 
@@ -121,6 +124,8 @@ button:hover {
   color: var(--main-white);
 }
 
+/*TO DO : essayer de fusionner les boutons si possible !*/
+
 #text1 {
   color: pink;
   position: fixed;
@@ -168,6 +173,9 @@ button:hover {
   width: 100px;
   margin: 10px;
   background-color: var(--main-blue);
+  border-radius: 30px;
+  border: none;
+  outline: none;
 }
 
 .boxcards {
@@ -337,18 +345,15 @@ input[type="checkbox"] {
 
 /*Animations*/
 
-.flip-over {
-  background: var(--main-blue);
+.card:active{
   animation-name: flipOver;
-  animation-duration: 0.5s;
+  animation-duration: 0.2s;
 }
 
 .hidden {
   background-color: transparent;
   display: none;
 }
-
-#replay:
 
 @keyframes flipOver {
   from {
@@ -374,4 +379,11 @@ input[type="checkbox"] {
   to {
     transform: perspective(400px);
   }
+};
+
+
+/*Adapte le thème du jeu en fonction du thème de l'utilisateur */
+
+@media (prefers-color-scheme:dark){
+  body{color: #eeeeee; background: #191919}
 };

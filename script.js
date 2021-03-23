@@ -1,54 +1,21 @@
-let clicBtn = document.getElementById("play");
-let menu = document.getElementById("barreMenu");
-
-
-if (window.matchMedia("(max-width: 900px)").matches) {
-  clicBtn.addEventListener("click", () => {
-    if(getComputedStyle(menu).display != "none"){
-      menu.style.display = "none";
-    }
-  });
-}
-
-/* Fonction qui permet de cacher-rendre visible le contenu du menu déroulant 
-
-const generalMenu = document.querySelector('nav');
-const menuBtn = document.querySelector('.dropdown-btn');
-const menu = document.querySelector('.dropdown-menu-content');
-
-menuBtn.addEventListener('click', () => {
-  menu.classList.toggle('hidden');
-  generalMenu.classList.toggle('hidden');
-}); */
-
-// Mise en place du jeu
+/* PROGRAMMATION DU JEU DE MEMORY*/
 
 const cardGrid = document.querySelector("#cardGrid");
 
-var arrayGame = [
-  [1,0,3,0],
-  [0,1,2,0],
-  [0,0,0,0],
-  [0,0,0,0]
+//0 = face cachée
+var tabGame = [
+  [0,0,0,0,0],
+  [0,0,0,0,0],
+  [0,0,0,0,0],
+  [0,0,0,0,0]
 ];
 
+var tabResult = genereTableauAleatoire();
+var prevSelection=[];
+var nbAffiche = 0;
+var readyToClick = true;
 
-function displayCard(){
-  var txt = "";
-  for (let i = 0; i<arrayGame.length; i++){
-      txt += "<div>";
-      for (let j=0; j<arrayGame[i].length; j++){
-        if (arrayGame[i][j] === 0){
-          txt +="<img class='card' src='img/logo.png'>";
-        } 
-        else{
-          txt +="<img class='card' src='" + getImage(arrayGame[i][j]) + "'>";
-        };
-      }
-      txt += "</div>";
-  }
-  cardGrid.innerHTML = txt;
-};
+// Détermine l'image à afficher
 
 function getImage(valeur){
   var imgSrc = "";
@@ -87,18 +54,85 @@ function getImage(valeur){
   return imgSrc;
 };
 
-getImage();
+// Met en place le jeu
+
+function displayCard(){
+  var txt = "";
+  for (let i = 0; i < tabGame.length; i++){
+      txt += "<div>";
+      for (let j=0; j < tabGame[i].length; j++){
+        if (tabGame[i][j] === 0){
+          txt +=`<button class='card' style='width: 105px;height:105px;' onClick='verif(\"${i}-${j}\")'></button>`;
+        }
+        else{
+          txt +="<img class='card' style='width: 100px;height:100px;' src='" + getImage(tabGame[i][j]) + "'>";
+        };
+      }
+      txt += "</div>";
+  };
+  cardGrid.innerHTML = txt;
+};
+
+function verif(bouton){
+  if(readyToClick){
+    nbAffiche++;
+    var ligne = bouton.substr(0,1);
+    var colonne = bouton.substr(2,1);
+    tabGame[ligne][colonne] = tabResult[ligne][colonne];
+    displayCard();
+
+    if(nbAffiche > 1){
+      readyToClick = false;
+      setTimeout(()=>{
+        //vérification
+        if (tabGame[ligne][colonne] !== tabResult[prevSelection[0]][prevSelection[1]]){
+          tabGame[ligne][colonne] = 0;
+          tabGame[prevSelection[0]][prevSelection[1]] = 0;
+        }
+        displayCard();
+        readyToClick = true;
+        nbAffiche = 0;
+        prevSelection = [ligne, colonne];
+      }, 1000)
+
+      //Réinitialise les images sélectionnées
+
+    } else{
+      prevSelection = [ligne, colonne];
+    }
+  }
+};
+
+function genereTableauAleatoire(){
+  var tab = [];
+
+  var nbImagePosition = [0,0,0,0,0,0,0,0,0,0];
+
+  for(let i=0; i<4; i++){
+    var ligne = [];
+    for(var j = 0; j<5;j++){
+      var fin = false;
+      while (!fin){
+        var randomImage = Math.floor(Math.random()*10);
+        if (nbImagePosition[randomImage] < 2){
+          ligne.push(randomImage+1);
+          nbImagePosition[randomImage]++;
+          fin = true;
+        }
+      }
+    }
+    tab.push(ligne);
+  }
+  return tab;
+};
+
 displayCard();
 
-
-/*let card = document.createElement("div");
-card.classList.add("card");
-cardGrid.appendChild(card);*/
+/* AUTRES SCRIPTS*/
 
 // Application d'un addeventlistener pour flip over les cartes au clic
 
 const cards = document.querySelectorAll('.card');
-console.log(cards);
 
 for (let i = 0; i < cards.length; i++) {
   cards[i].addEventListener('click', () => {
@@ -106,4 +140,36 @@ for (let i = 0; i < cards.length; i++) {
   });
 };
 
+/* Fonction qui permet de cacher-rendre visible le contenu du menu déroulant 
+
+const generalMenu = document.querySelector('nav');
+const menuBtn = document.querySelector('.dropdown-btn');
+const menu = document.querySelector('.dropdown-menu-content');
+
+menuBtn.addEventListener('click', () => {
+  menu.classList.toggle('hidden');
+  generalMenu.classList.toggle('hidden');
+}); */
+
+
+// Permet l'apparition-disparition de la barre latérale sur petit écran
+
+let clicBtn = document.getElementById("play");
+let menu = document.getElementById("barreMenu");
+
+if (window.matchMedia("(max-width: 900px)").matches) {
+  clicBtn.addEventListener("click", () => {
+    if(getComputedStyle(menu).display != "none"){
+      menu.style.display = "none";
+    }
+  });
+};
+
+// Permet de relancer le jeu (pas encore opé)
+let replay = getElementById("replay");
+replay.addEventListener("onClick", ()=>{
+  genereTableauAleatoire();
+  displayCard();
+  tabGame = tabResult;
+})
 
