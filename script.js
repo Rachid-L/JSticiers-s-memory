@@ -173,3 +173,18 @@ replay.addEventListener("onClick", ()=>{
   tabGame = tabResult;
 })
 
+
+
+// Mise en place de la fonctionnalité d'effacement du menu latéral lorsque le joueur appuie sur "Play" 
+
+let clicBtn = document.getElementById("play");
+let menu = document.getElementById("barreMenu");
+let mql = window.matchMedia("(max-width:900px");
+
+if (mql.matches) {
+  clicBtn.addEventListener("click", () => {
+    if (getComputedStyle(menu).display != "none") {
+      menu.style.display = "none";
+    }
+  });
+}
