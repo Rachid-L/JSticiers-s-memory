@@ -6,11 +6,9 @@ function play() {
     increment();
     document.getElementById("start").innerHTML = "";
     audioplay.play();
-   
   } else {
     running = 0;
     document.getElementById("start").innerHTML = "";
-    
   }
 }
 
