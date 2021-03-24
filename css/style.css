@@ -73,9 +73,6 @@ figure {
 #page > footer {
   grid-area: foot;
   background-color:var(--main-blue);
-  /*display: flex;
-  align-items: center;
-  justify-content: center;*/
   color: var(--main-white);
 }
 
@@ -92,6 +89,12 @@ a:hover{
 
 img{
   cursor:pointer;
+}
+#output{
+  color:var(--main-white);
+  font-style: bold ; 
+  font-size: large;
+  font-weight: bold ;
 }
 
 /*NAVBAR.CSS*/
@@ -309,7 +312,6 @@ input[type="checkbox"] {
 .popup .text p {
   padding-bottom: 220px;
   font-size: 20px;
-  font-weight: 550;
   text-align: center;
   
 }

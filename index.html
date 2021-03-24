@@ -44,7 +44,7 @@
                 <label id="regles" for="show" class="show-btn">Règles du jeu</label>
             </div>
             <div class="btn">
-            <label for="theme" class="theme" id="text1">Choisis ton thème</label>
+            <label for="selectedTheme" class="theme" id="text1">Choisis ton thème</label>
             </div>
             <select class="theme" id="selectedTheme" name="selectedTheme">
                 <option value="animals">Animaux</option>
@@ -85,7 +85,7 @@
 <!--haut de page logo-->
 
     <header>
-        <img id="logoMemory" src="img/logo-memory.png">
+        <img id="logoMemory" src="img/logo-memory.png" alt="logo du memory">
     </header>
     
     <main>
@@ -102,9 +102,9 @@
 
     <section id="playing">
         <div class= "chronoContainer">
-            <h1 id="Chrono"><p id="output"><b>0:00:00:00</b></p></h1>
+            <p id="Chrono"><b id="output"><b>0:00:00:00</b></b></p>
         </div>
-        <button  id="reset" onclick="reset()"><b id="reset"></b>Rejouer</button>
+        <button  id="reset" onclick="reset()"><b id="reset1"></b>Rejouer</button>
         
     </section>
     
