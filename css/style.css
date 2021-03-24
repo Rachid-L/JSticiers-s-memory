@@ -42,9 +42,6 @@ figure {
   
 }
 
-
-
-
 #page > nav {
   grid-area: nav;
   display: flex;
@@ -59,7 +56,7 @@ figure {
   justify-content: center;
 }
 
-#page > #play {
+#page > #playing {
   grid-area: play;
   background-color: var(--second-blue);
   display: flex;
@@ -68,6 +65,7 @@ figure {
   border-width: 1px;
   border-color: palevioletred;
   border-bottom-style: solid;
+  color: var(--main-white);
 }
 
 
@@ -251,10 +249,6 @@ h1 {
 #replay:active{
   transform: rotateZ(-360deg);
   transition: all 0.1s ease;
-}
-
-#play{
-  color: var(--main-white);
 }
 
 /*MODALE.CSS*/

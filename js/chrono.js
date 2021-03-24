@@ -5,6 +5,7 @@ function play() {
     running = 1;
     increment();
     document.getElementById("start").innerHTML = "";
+    audioplay.play();
    
   } else {
     running = 0;
