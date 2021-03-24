@@ -13,13 +13,14 @@ function play() {
     
   }
 }
+
+//Permet de relancer le jeu 
 function reset() {
-  running = 0;
-  time = 0;
-  document.getElementById("replay").innerHTML = "";
-  document.getElementById("output").innerHTML = "0:00:00:00";
- 
+  document.location.reload();
 }
+
+
+//Permet de relancer le jeu 
 function increment() {
   if (running == 1) {
     setTimeout(function () {

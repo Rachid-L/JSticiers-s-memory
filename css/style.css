@@ -385,43 +385,10 @@ input[type="checkbox"] {
 
 /*Animations*/
 
-.card:active{
-  animation-name: flipOver;
-  animation-duration: 0.2s;
-}
-
 .hidden {
   background-color: transparent;
   display: none;
 }
-
-@keyframes flipOver {
-  from {
-    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-    animation-timing-function: ease-in;
-    opacity: 0;
-  }
-
-  40% {
-    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-    animation-timing-function: ease-in;
-  }
-
-  60% {
-    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-    opacity: 1;
-  }
-
-  80% {
-    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-  }
-
-  to {
-    transform: perspective(400px);
-  }
-};
-
-
 /*Adapte le thème du jeu en fonction du thème de l'utilisateur */
 
 @media (prefers-color-scheme:dark){

@@ -134,26 +134,3 @@ function genereTableauAleatoire(){
 
 displayCard();
 
-/* AUTRES SCRIPTS*/
-
-// Application d'un addeventlistener pour flip over les cartes au clic
-
-const cards = document.querySelectorAll('.card');
-
-for (let i = 0; i < cards.length; i++) {
-  cards[i].addEventListener('click', () => {
-    cards[i].classList.add('flip-over');
-  });
-};
-
-  /* Permet de relancer le jeu (pas encore opé)
-let replay = document.getElementById("replay");
-replay.addEventListener("onClick", ()=>{
-  genereTableauAleatoire();
-  displayCard();
-  tabGame = tabResult;
-}) */
-
-
-
-
