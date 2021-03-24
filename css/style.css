@@ -62,7 +62,7 @@ figure {
   border-color: palevioletred;
 }
 
-#page > #play {
+#page > #playing {
   grid-area: play;
   background-color: var(--main-blue);
   display: flex;

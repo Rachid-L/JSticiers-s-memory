@@ -65,7 +65,7 @@ function displayCard(){
           txt +=`<button class='card' style='width: 105px;height:105px;' onClick='verif(\"${i}-${j}\")'></button>`;
         }
         else{
-          txt +="<img class='card' style='width: 100px;height:100px;' src='" + getImage(tabGame[i][j]) + "'>";
+          txt +="<img class='card' style='width: 105px;height:94px;' src='" + getImage(tabGame[i][j]) + "'>";
         };
       }
       txt += "</div>";
