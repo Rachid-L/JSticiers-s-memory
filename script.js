@@ -166,10 +166,40 @@ if (window.matchMedia("(max-width: 900px)").matches) {
 };
 
 // Permet de relancer le jeu (pas encore opé)
-let replay = getElementById("replay");
+let replay = document.getElementById("replay");
 replay.addEventListener("onClick", ()=>{
   genereTableauAleatoire();
   displayCard();
   tabGame = tabResult;
 })
 
+
+
+const counter = document.querySelector('.counter');
+let moves = 0;
+
+function flipOnclick(e) {
+  moves++;
+  counter.innerHTML = moves;
+  const element = e.target;
+  last_flipped.push(element);
+  element.classlist.add('flipped');
+  compareFlipped(last_flipped);
+}
+
+// audio //
+//audio btn play
+var audioplay = document.getElementById('audioplay'),
+plays = document.getElementById('play');
+ 
+plays.onclick = function(){
+audioplay.play();
+}
+
+// audio btn regles
+var click = document.getElementById('click'),
+regles = document.getElementById('regles');
+ 
+regles.onclick = function(){
+click.play();
+}

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="style-h2prog.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="script-h2Prog.js" defer></script>
+    <script src="script.js" defer></script>
     <title>Memory Game by La Ligue des JSticiers</title>
 </head>
 
@@ -15,11 +15,31 @@
 
 <!--bar nav coté gauche-->
 
+<figure>
+    <audio id="audioplay"
+        controls
+        src="audio/play.ogg">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+
+    <audio id="click"
+        controls
+        src="audio/click.mp3">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+
+
+</figure>
+
+
+
     <nav id="barreMenu">
         <div class="sidenav">
             <img id="fourm" src="img/logo.png" alt="Draw of an Anteater">
             <div class="btn">
-                <label for="show" class="show-btn">Règles du jeu</label>
+                <label id="regles" for="show" class="show-btn">Règles du jeu</label>
             </div>
             <div class="btn">
             <label for="mode" class="mode1" id="text1">Choisis ton code</label>
@@ -43,6 +63,7 @@
         </div>
     </nav>
 
+
     <!--Fenêtre pop-up-->
 
     <div class="center">
@@ -61,23 +82,30 @@
         </div>
     </div>
 
+<!--haut de page logo-->
+
     <header>
         <img id="logoMemory" src="img/logo-memory.png">
     </header>
-
+    
     <main>
-        
+
         <div class="cardContainer">
 
             <div id="cardGrid"></div>
 
         </div>
+
+        
         
     </main>
 
+  
     <section id="play">
+
         <h1>Rejouer</h1>
         <img id="replay" src="img/replay.png" alt="Replay arrow">
+        
     </section>
     
     <footer>

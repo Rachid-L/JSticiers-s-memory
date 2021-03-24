@@ -1,9 +1,18 @@
+
+/*audio*/
+
+figure {
+  display: none;
+}
+
+
 /*Template CSS de la page en display grid + couleurs*/
 
 :root {
-  --main-blue:#02b3e4 ;
+  --main-blue:#02b3e4;
   --main-white: #f9f9f9;
   --second-blue: #34568B;
+ 
 }
 
 #page {
@@ -18,6 +27,7 @@
   grid-template-rows: 150px 1fr 100px 70px;
   grid-template-columns: 130px 1fr;
   margin: 0;
+  
 }
 
 #page > header {
@@ -27,27 +37,34 @@
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--second-blue);
-  background-color: var(--main-white);
+  background-color: var(--second-blue);
+  
+  
 }
+
+
+
 
 #page > nav {
   grid-area: nav;
-  background-color: var(--main-blue);
   display: flex;
-  box-shadow: 10px 10px 10px pink;
+  box-shadow: 5px 0px 32px rgba(0, 0, 0, 0.9);
 }
 
 #page > main {
   grid-area: main;
-  background-color: var(--main-white);
+  background-color: var(--second-blue);
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-color: palevioletred;
 }
 
 #page > #play {
   grid-area: play;
-  background-color: var(--main-white);
+  background-color: var(--main-blue);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,10 +88,10 @@ img{
 #fourm {
   width:190px;
   height:190px;
-  margin: 20px 0px;	
+  margin-left: 40px;	
   border-radius: 100px;
   box-shadow: 0 0px 100px pink;
-  cursor: pointer;
+ 
 }
 
 nav {
@@ -85,12 +102,15 @@ nav {
   top: 0; /* Stay at the top */
   left: 0;
   padding: 16px 80px 10px 16px;
+  background-image: linear-gradient(to right, #02b3e4, #02b3e4, #02b3e4, 
+  #02b3e4, #02b3e4, #02b3e4, #02b3e4, #02b3e4, #02b3e4, #02b3e4, #086883);
+  
 }
   
 .show-btn {
   position: fixed;
   padding: 30px;
-  margin-left: 45px;
+  margin-left: -70px;
   margin-top: 50px;
   border-style: none;
   border-radius: 50px;
@@ -103,13 +123,13 @@ nav {
 
 .show-btn:hover {
   background-color:pink; /* Green */
-  color: var(--main-white);
+  color: var(--second-blue);
 }
 
 button.plays {
   padding: 30px;
-  margin-left: 50px;
-  margin-top: 100px;
+  margin-left: 40px;
+  margin-top: 80px;
   text-align: center;
   border-style: none;
   border-radius: 50px;
@@ -121,7 +141,7 @@ button.plays {
 
 button:hover {
   background-color:pink; /* Green */
-  color: var(--main-white);
+  color: var(--second-blue);
 }
 
 /*TO DO : essayer de fusionner les boutons si possible !*/
@@ -130,7 +150,7 @@ button:hover {
   color: pink;
   position: fixed;
   margin-top: 180px;
-  margin-left: 20px;
+  margin-left: -75px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
@@ -138,7 +158,7 @@ button:hover {
 .mode1{
   margin-top: 250px;
   margin-bottom: 30px;
-  margin-left: 63px;
+  margin-left: 45px;
   padding: 20px;
   text-align: center;
   border-style: none;
@@ -151,14 +171,14 @@ button:hover {
   position: fixed;
   margin-bottom: 10px;
   margin-top: 30px;
-  margin-left: 20px;
+  margin-left: -75px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
 
 .mode {
   margin-top: 100px;
-  margin-left: 63px;
+  margin-left: 45px;
   padding: 20px;
   text-align: center;
   border-style: none;
@@ -168,6 +188,7 @@ button:hover {
 
 /*Disposition des cartes*/
 
+
 .card {
   height: 100px;
   width: 100px;
@@ -176,6 +197,8 @@ button:hover {
   border-radius: 30px;
   border: none;
   outline: none;
+
+  
 }
 
 .boxcards {
@@ -184,6 +207,8 @@ button:hover {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 150px);
   grid-gap: 3px 3em;
+  
+  
 }
 
 
@@ -223,13 +248,13 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: var(--main-white);
-  opacity: 0.95;
+  background: rgba(255, 255, 255, 0.849);
+  opacity: 0.90;
   width: 1000px;
   padding: 30px;
-  box-shadow: 0 0 50px pink;
-  border-radius: 40px;
-  border-style: dotted;
+  box-shadow: 0 0 50px black;
+  border-radius: 50px;
+  border-style: solid;
 }
 
 input[type="checkbox"] {
@@ -250,21 +275,24 @@ input[type="checkbox"] {
 }
 
 .popup .close-btn:hover {
-  color: pink;
+  color: rgb(145, 0, 0);
 }
 
 .popup .text {
   padding-bottom: 20px;
   font-size: 35px;
   text-align: center;
-  color: gray;
+  color: rgb(0, 0, 0);
+  
 }
 
 .popup .text h1 {
   padding-bottom: 20px;
   font-size: 35px;
-  font-weight: 600;
+  font-weight: bold;
   text-align: center;
+  
+  
 }
 
 .popup .text p {
@@ -272,6 +300,7 @@ input[type="checkbox"] {
   font-size: 20px;
   font-weight: 550;
   text-align: center;
+  
 }
 
 /*RESPONSIVE*/
@@ -308,8 +337,8 @@ input[type="checkbox"] {
   }
 
   .show-btn {
-    font-size: 16px;
-    margin-left: -15px;
+    font-size: 14px;
+    margin-left: -68px;
     height: 20px;
     width: 69px;
   }
@@ -320,12 +349,12 @@ input[type="checkbox"] {
 
   #text1 {
     font-size: 17px;
-    margin-left: -30px;
+    margin-left: -89px;
   }
 
   #text {
     font-size: 17px;
-    margin-left: -30px;
+    margin-left: -89px;
   }
 
   .mode {
@@ -387,3 +416,5 @@ input[type="checkbox"] {
 @media (prefers-color-scheme:dark){
   body{color: #eeeeee; background: #191919}
 };
+
+
