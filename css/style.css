@@ -25,8 +25,9 @@ figure {
     'nav  play'
     'nav  foot';
   grid-template-rows: 150px 1fr 100px 70px;
-  grid-template-columns: 130px 1fr;
+  grid-template-columns: 0.001px 1fr;
   margin: 0;
+  background-color: var(--second-blue);
   
 }
 
@@ -82,12 +83,11 @@ footer {
   display: flex ;
   flex-direction: column;
 }
-li {
-  list-style:none;
+a {
   text-decoration: none;
 }
 a:hover{
-  color: chocolate;
+  color: violet;
 }
 
 img{
@@ -380,10 +380,6 @@ input[type="checkbox"] {
   background-color: transparent;
   display: none;
 }
-/*Adapte le thème du jeu en fonction du thème de l'utilisateur */
 
-@media (prefers-color-scheme:dark){
-  body{color: #eeeeee; background: #191919}
-};
 
 
