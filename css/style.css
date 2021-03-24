@@ -57,17 +57,17 @@ figure {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom-style: solid;
-  border-width: 1px;
-  border-color: palevioletred;
 }
 
 #page > #play {
   grid-area: play;
-  background-color: var(--main-blue);
+  background-color: var(--second-blue);
   display: flex;
   align-items: center;
   justify-content: center;
+  border-width: 1px;
+  border-color: palevioletred;
+  border-bottom-style: solid;
 }
 
 
@@ -168,7 +168,7 @@ button:hover {
   font-size: 20px;
 }
 
-.mode1{
+.theme{
   margin-top: 250px;
   margin-bottom: 30px;
   margin-left: 45px;
@@ -251,6 +251,10 @@ h1 {
 #replay:active{
   transform: rotateZ(-360deg);
   transition: all 0.1s ease;
+}
+
+#play{
+  color: var(--main-white);
 }
 
 /*MODALE.CSS*/
@@ -356,7 +360,7 @@ input[type="checkbox"] {
     width: 69px;
   }
   
-  .mode1{
+  .theme{
     margin-left: 0px;
   }
 

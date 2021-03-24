@@ -11,61 +11,67 @@ var tabGame = [
 ];
 
 var tabResult = genereTableauAleatoire();
-var prevSelection=[];
+var prevSelection = [];
 var nbAffiche = 0;
 var readyToClick = true;
 
-// Détermine l'image à afficher
+const gameTheme = document.getElementById("selectedTheme");
+let gameChosenTheme = gameTheme.value;
+
+// Détermine l'image à afficher sur le mode ANIMAUX
 
 function getImage(valeur){
   var imgSrc = "";
   switch(valeur){
     case 1:
-      imgSrc += "img/elephant.png";
+      imgSrc += "1.png";
       break;
     case 2:
-      imgSrc += "img/giraffe.png";
+      imgSrc += "2.png";
       break;
     case 3:
-      imgSrc += "img/hippo.png";
+      imgSrc += "3.png";
       break;
     case 4:
-      imgSrc += "img/monkey.png";
+      imgSrc += "4.png";
       break;
     case 5:
-      imgSrc += "img/panda.png";
+      imgSrc += "5.png";
       break;
     case 6:
-      imgSrc += "img/parrot.png";
+      imgSrc += "6.png";
       break;
     case 7:
-      imgSrc += "img/penguin.png";
+      imgSrc += "7.png";
       break;
     case 8:
-      imgSrc += "img/pig.png";
+      imgSrc += "8.png";
       break;
     case 9:
-      imgSrc += "img/rabbit.png";
+      imgSrc += "9.png";
       break;
     case 10:
-      imgSrc += "img/snake.png";
+      imgSrc += "10.png";
       break;
   }
   return imgSrc;
 };
 
+
 // Met en place le jeu
 
-function displayCard(){
+function displayCard(){ //mettre le mode de jeu en paramètres !!!
   var txt = "";
+  const gameTheme = document.getElementById("selectedTheme");
+  let gameChosenTheme = gameTheme.value;
   for (let i = 0; i < tabGame.length; i++){
       txt += "<div>";
       for (let j=0; j < tabGame[i].length; j++){
         if (tabGame[i][j] === 0){
-          txt +=`<button class='card' style='width: 105px;height:105px;' onClick='verif(\"${i}-${j}\")'></button>`;
+          txt += `<button class='card' style='width: 105px;height:105px;' onClick='verif(\"${i}-${j}\")'></button>`;
         }
-        else{
-          txt +="<img class='card' style='width: 100px;height:100px;' src='" + getImage(tabGame[i][j]) + "'>";
+        else {
+          txt += `<img class='card' style='width: 100px;height:100px;' src='img/${gameChosenTheme}/` + getImage(tabGame[i][j]) + "'>";
         };
       }
       txt += "</div>";
@@ -140,14 +146,7 @@ for (let i = 0; i < cards.length; i++) {
   });
 };
 
-
-
-
-
-
-
-
-  /* // Permet de relancer le jeu (pas encore opé)
+  /* Permet de relancer le jeu (pas encore opé)
 let replay = document.getElementById("replay");
 replay.addEventListener("onClick", ()=>{
   genereTableauAleatoire();

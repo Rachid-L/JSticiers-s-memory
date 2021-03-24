@@ -37,8 +37,6 @@
 
 </figure>
 
-
-
     <nav id="barreMenu">
         <div class="sidenav">
             <img id="fourm" src="img/logo.png" alt="Draw of an Anteater">
@@ -46,15 +44,14 @@
                 <label id="regles" for="show" class="show-btn">Règles du jeu</label>
             </div>
             <div class="btn">
-            <label for="mode" class="mode1" id="text1">Choisis ton code</label>
+            <label for="theme" class="theme" id="text1">Choisis ton thème</label>
             </div>
-            <select class="mode1" id="mode" name="mode">
-                <option value="">HTML</option>
-                <option value="">CSS</option>
-                <option value="">JS</option>
+            <select class="theme" id="selectedTheme" name="selectedTheme">
+                <option value="animals">Animaux</option>
+                <option value="starwars">Starwars</option>
             </select>
             <div class="btn">
-            <label for="dificult" class="mode" id="text">Choisis ton mode</label>
+            <label for="dificult" class="mode" id="text">Choisis ta difficulté</label>
             </div>
             <select class="mode" id="dificult" name="dificult">
                 <option value="">Facile</option>
@@ -66,7 +63,6 @@
             </div>
         </div>
     </nav>
-
 
     <!--Fenêtre pop-up-->
 
@@ -103,31 +99,18 @@
         
         
     </main>
-    
 
-  
     <section id="play">
         <div class= "chronoContainer">
             <h1 id="Chrono"><p id="output"><b>0:00:00:00</b></p></h1>
-            
-            
-            
-             </div>
-        
-             <button  id="reset" onclick="reset()"><b id="reset"></b>Rejouer</button>
-        <img id="replay" src="img/replay.png" alt="Replay arrow">
+        </div>
+        <button  id="reset" onclick="reset()"><b id="reset"></b>Rejouer</button>
         
     </section>
     
     <footer>
-        <p>Created by La Ligue des JSticiers</p>
+        <p>Created by La Ligue des JSticiers : <a target="_blank" href="https://www.linkedin.com/in/alexandre-mazoyer-1583b2114/">Alexandre</a>, <a target="_blank" href="https://www.linkedin.com/">Loïc</a>, <a target="_blank" href="https://www.linkedin.com/in/mauranne-lagneau/">Mauranne</a> & <a target="_blank" href="https://www.linkedin.com/in/rachid-leboukh-413304185/">Rachid</a></p>
         <span style="font-size: small;">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> & Animal pack by Kenney Vleugels for Kenney (www.kenney.nl).</span>
-        <ul>
-            <li><a target="_blank" href="https://www.linkedin.com/in/mauranne-lagneau/">Mauranne Lagneau</a></li>
-            <li><a target="_blank" href="https://www.linkedin.com/in/alexandre-mazoyer-1583b2114/">Alexandre Mazoyer</a></li>
-            <li><a target="_blank" href="https://www.linkedin.com/in/mauranne-lagneau/">Loic Pimet</a></li>
-            <li><a target="_blank" href="https://www.linkedin.com/in/rachid-leboukh-413304185/">Rachid Leboukh</a></li>
-        </ul>
     </footer>
 
 </body>
