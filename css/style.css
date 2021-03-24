@@ -161,7 +161,8 @@ button:hover {
 /*TO DO : essayer de fusionner les boutons si possible !*/
 
 #text1 {
-  color: pink;
+  color: white;
+  font-weight: 500;
   position: fixed;
   margin-top: 180px;
   margin-left: -75px;
@@ -208,7 +209,6 @@ button:hover {
 /*CSS élements*/
 
 body{
-  color: var(--second-blue);
   font-family: 'Roboto', sans-serif;
   text-align: center;
 }
@@ -222,15 +222,19 @@ h1 {
   width: 400px;
 }
 
-#replay{
-  width: 40px;
-  padding: 20px;
-  cursor: pointer;
+#playing > p, #playing > button{
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
-#replay:active{
-  transform: rotateZ(-360deg);
-  transition: all 0.1s ease;
+#playing > button{
+  text-align: center;
+  border-style: none;
+  border-radius: 50px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .8);
+  cursor: pointer;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /*MODALE.CSS*/
@@ -291,8 +295,7 @@ input[type="checkbox"] {
 .popup .text p {
   padding-bottom: 220px;
   font-size: 20px;
-  text-align: center;
-  
+  text-align: center; 
 }
 
 /*RESPONSIVE*/
@@ -320,8 +323,6 @@ input[type="checkbox"] {
   .show-btn {
     font-size: 14px;
     margin-left: -68px;
-    height: 20px;
-    width: 69px;
   }
   
   .theme{
