@@ -99,7 +99,7 @@ function verif(bouton){
         readyToClick = true;
         nbAffiche = 0;
         prevSelection = [ligne, colonne];
-      }, 1000)
+      }, 500)
 
       //Réinitialise les images sélectionnées
 
