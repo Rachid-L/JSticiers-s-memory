@@ -314,30 +314,21 @@ input[type="checkbox"] {
   
 }
 
+
+
 /*RESPONSIVE*/
 
 @media screen and (max-width: 900px) {
-  .boxcards {
-    height: 50%;
-    margin-top: 20px;
-    margin-bottom: 227px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 140px);
-    grid-gap: 3px 1em;
-  }
+  
+  #cardGrid{
+    display:flex;
+    justify-content: space-around;
 
-  main {
-    margin-left: 0px;
-  }
-
-  .card {
-    margin-bottom: -100%;
-    margin-top: -100px;
-  }
+    }
+ 
 }
 
-/*RESPONSIVE NAVBAR*/
+/* NAVBAR*/
 
 @media screen and (max-width: 900px){
   nav{
