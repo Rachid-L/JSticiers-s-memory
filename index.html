@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
+    <script src="chrono.js" defer></script>
+    <script src="snap.js" defer></script>
     <title>Memory Game by La Ligue des JSticiers</title>
 </head>
 
@@ -38,7 +41,7 @@
                 <option value="">Difficile</option>
             </select>
             <div class="btn">
-                <button  class="plays" onclick="play()"><b id="start"></b>play</button>
+                <button  class="plays" id="play" onclick="play()"><b id="start"></b>play</button>
             </div>
         </div>
     </nav>
@@ -84,15 +87,19 @@
             
              </div>
         
-        <h1>Rejouer</h1>
+             <button  id="reset" onclick="reset()"><b id="reset"></b>Rejouer</button>
         <img id="replay" src="img/replay.png" alt="Replay arrow">
     </section>
     
     <footer>
-        <p>Created by La Ligue des JSticiers
-        <br>
-        <span style="font-size: small;">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> & Animal pack
-            by Kenney Vleugels for Kenney (www.kenney.nl).</span></p>
+        <p>Created by La Ligue des JSticiers</p>
+        <span style="font-size: small;">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> & Animal pack by Kenney Vleugels for Kenney (www.kenney.nl).</span>
+        <ul>
+            <li><a target="_blank" href="https://www.linkedin.com/in/mauranne-lagneau/">Mauranne Lagneau</a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/alexandre-mazoyer-1583b2114/">Alexandre Mazoyer</a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/mauranne-lagneau/">Loic Pimet</a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/rachid-leboukh-413304185/">Rachid Leboukh</a></li>
+        </ul>
     </footer>
 
 </body>

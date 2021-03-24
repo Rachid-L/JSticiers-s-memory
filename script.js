@@ -1,3 +1,4 @@
+
 /* PROGRAMMATION DU JEU DE MEMORY*/
 
 const cardGrid = document.querySelector("#cardGrid");
@@ -152,18 +153,7 @@ menuBtn.addEventListener('click', () => {
 }); */
 
 
-// Permet l'apparition-disparition de la barre latérale sur petit écran
 
-let clicBtn = document.getElementById("play");
-let menu = document.getElementById("barreMenu");
-
-if (window.matchMedia("(max-width: 900px)").matches) {
-  clicBtn.addEventListener("click", () => {
-    if(getComputedStyle(menu).display != "none"){
-      menu.style.display = "none";
-    }
-  });
-};
 
 // Permet de relancer le jeu (pas encore opé)
 let replay = getElementById("replay");
