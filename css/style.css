@@ -70,13 +70,26 @@ figure {
   justify-content: center;
 }
 
+
 #page > footer {
   grid-area: foot;
   background-color:var(--main-blue);
-  display: flex;
+  /*display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;*/
   color: var(--main-white);
+}
+
+footer {
+  display: flex ;
+  flex-direction: column;
+}
+li {
+  list-style:none;
+  text-decoration: none;
+}
+a:hover{
+  color: chocolate;
 }
 
 img{

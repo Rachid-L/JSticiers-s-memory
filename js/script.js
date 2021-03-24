@@ -140,66 +140,21 @@ for (let i = 0; i < cards.length; i++) {
   });
 };
 
-/* Fonction qui permet de cacher-rendre visible le contenu du menu déroulant 
-
-const generalMenu = document.querySelector('nav');
-const menuBtn = document.querySelector('.dropdown-btn');
-const menu = document.querySelector('.dropdown-menu-content');
-
-menuBtn.addEventListener('click', () => {
-  menu.classList.toggle('hidden');
-  generalMenu.classList.toggle('hidden');
-}); */
 
 
-// Permet l'apparition-disparition de la barre latérale sur petit écran
 
-let clicBtn = document.getElementById("play");
-let menu = document.getElementById("barreMenu");
 
-if (window.matchMedia("(max-width: 900px)").matches) {
-  clicBtn.addEventListener("click", () => {
-    if(getComputedStyle(menu).display != "none"){
-      menu.style.display = "none";
-    }
-  });
-};
 
-// Permet de relancer le jeu (pas encore opé)
+
+
+  /* // Permet de relancer le jeu (pas encore opé)
 let replay = document.getElementById("replay");
 replay.addEventListener("onClick", ()=>{
   genereTableauAleatoire();
   displayCard();
   tabGame = tabResult;
-})
+}) */
 
 
 
-const counter = document.querySelector('.counter');
-let moves = 0;
 
-function flipOnclick(e) {
-  moves++;
-  counter.innerHTML = moves;
-  const element = e.target;
-  last_flipped.push(element);
-  element.classlist.add('flipped');
-  compareFlipped(last_flipped);
-}
-
-// audio //
-//audio btn play
-var audioplay = document.getElementById('audioplay'),
-plays = document.getElementById('play');
- 
-plays.onclick = function(){
-audioplay.play();
-}
-
-// audio btn regles
-var click = document.getElementById('click'),
-regles = document.getElementById('regles');
- 
-regles.onclick = function(){
-click.play();
-}
