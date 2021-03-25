@@ -92,7 +92,6 @@ img{
 }
 #output{
   color:var(--main-white);
-  font-style: bold ; 
   font-size: large;
   font-weight: bold ;
 }
