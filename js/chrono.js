@@ -14,9 +14,9 @@ function play() {
 
 //Permet de relancer le jeu 
 function reset() {
-  document.location.reload();
+  document.location.reload(); 
 }
-
+rejoue.play();
 
 //Permet de relancer le jeu 
 function increment() {
@@ -34,8 +34,11 @@ function increment() {
         secs = "0" + secs;
       }
       document.getElementById("output").innerHTML =
+      
         hours + ":" + mins + ":" + secs + ":" + tenths + "0";
       increment();
     }, 100);
   }
 }
+
+

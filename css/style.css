@@ -321,21 +321,25 @@ input[type="checkbox"] {
   }
 
   .show-btn {
-    font-size: 14px;
-    margin-left: -68px;
+    width: 55px;
+    font-size: 15px;
+    margin-left: -65px;
   }
   
   .theme{
-    margin-left: 0px;
+    
+    font-size: 12px;
+    width: 116px;
+    margin-left: -10px;
   }
 
   #text1 {
-    font-size: 17px;
-    margin-left: -89px;
+    font-size: 16px;
+    margin-left: -91px;
   }
 
   button.plays {
-    margin-left: -10px;
+    margin-left: -13px;
   }
 
   #fourm{
@@ -351,6 +355,11 @@ input[type="checkbox"] {
   background-color: transparent;
   display: none;
 }
+
+
+
+
+
 
 
 

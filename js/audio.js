@@ -7,3 +7,7 @@ regles = document.getElementById('regles');
 regles.onclick = function(){
 click.play();
 }
+
+
+
+

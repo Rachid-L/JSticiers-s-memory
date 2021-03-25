@@ -134,3 +134,7 @@ function genereTableauAleatoire(){
 
 displayCard();
 
+
+
+
+
