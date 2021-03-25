@@ -79,7 +79,7 @@ function displayCard(){ //mettre le mode de jeu en paramètres !!!
   cardGrid.innerHTML = txt;
 };
 
-function verif(bouton){
+/*function verif(bouton){
   if(readyToClick){
     nbAffiche++;
     var ligne = bouton.substr(0,1);
@@ -107,7 +107,7 @@ function verif(bouton){
       prevSelection = [ligne, colonne];
     }
   }
-};
+};*/
 
 function genereTableauAleatoire(){
   var tab = [];
@@ -135,6 +135,51 @@ function genereTableauAleatoire(){
 displayCard();
 
 
+// calcule le nombre de couple trouver (10) = arrét du jeux chrono 
 
+let nombreDecouple = 0;
 
+function arret() { 
+ setTimeout(play);
+ good.play();
+ 
+  }
 
+function verif(bouton){
+  if(readyToClick){
+    nbAffiche++;
+    var ligne = bouton.substr(0,1);
+    var colonne = bouton.substr(2,1);
+    tabGame[ligne][colonne] = tabResult[ligne][colonne];
+    displayCard();
+
+    if(nbAffiche > 1){
+      readyToClick = false;
+      setTimeout(()=>{
+        //vérification
+        if (tabGame[ligne][colonne] !== tabResult[prevSelection[0]][prevSelection[1]]){
+          tabGame[ligne][colonne] = 0;
+          tabGame[prevSelection[0]][prevSelection[1]] = 0;
+          
+        } else { 
+          nombreDecouple++;
+            console.log(nombreDecouple);}
+            if (nombreDecouple === 10) {
+              arret();
+            }
+        
+        displayCard();
+        readyToClick = true;
+        nbAffiche = 0;
+        prevSelection = [ligne, colonne];
+      }, 500)
+
+      //Réinitialise les images sélectionnées
+
+    } else{
+      prevSelection = [ligne, colonne];
+      
+      
+    }
+  }
+};

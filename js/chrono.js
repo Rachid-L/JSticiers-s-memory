@@ -16,6 +16,7 @@ function play() {
 function reset() {
   document.location.reload(); 
 }
+
 rejoue.play();
 
 //Permet de relancer le jeu 
