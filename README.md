@@ -1,1 +1,0 @@
-# JSticiers-s-memory
